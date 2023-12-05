@@ -1,0 +1,148 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+header {
+  @include flexCenter;
+  
+  margin: 10px 29px;
+  justify-content: space-around;
+  height: 6vh;
+  padding: 0 20px;
+  border: 2px solid $gray-200;
+  border-radius: 16px;
+  background-color: $pink-900;
+  color: $white-100;
+  font-weight: 800;
+  font-size: 22px;
+
+  
+  .logoContainer{
+    @include flexCenter;
+    font-weight: 800;
+    strong{
+      color: $pink-700;
+    }
+    svg {
+      padding-top: 7px;
+      color: $pink-700;
+      
+    }
+  }
+
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .navItem:hover::before {
+    width: 100%;
+  }
+  
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  img {
+    width: 3rem;
+  }
+
+  
+  nav {
+    width: 38rem;
+  }
+
+  ul {
+    @include flexCenter;
+    justify-content: space-around;
+    cursor: pointer;
+
+    .redes{
+      @include flexCenter;
+      justify-content: space-around;
+      width: 6vw;      
+    }
+
+    .navItem {
+      position: relative;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        height: 4px;
+        width: 0;
+        background-color: $pink-700;
+        border-radius: 50px;
+        transition: width 0.5s ease;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+    }
+
+    li:hover {
+      transition: width 0.5s ease;
+      color: $pink-700;
+    }
+
+    svg{
+      margin-top: 8px;
+      gap:5px;
+      font-size: 25px;
+    }
+
+    a:hover{
+      transition: width 0.5s ease;
+      color: $pink-700
+    }
+  }
+
+  .line {
+    width: 2px;
+    height: 30px;
+    background-color: $white-100;
+    transform: scaleX(0.5);
+  }
+
+  @media (max-width: 768px) {
+    justify-content: space-between; 
+    height: 20vh;
+    font-size: 17px;
+    border-radius: 0;
+    margin: 0;
+    .hamburger , .logoContainer {
+      display: none; 
+    }
+    
+    img{
+      display: none;
+    }
+
+   .line{
+      display: none;
+    }
+    
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      
+      .redes{
+        display: none;
+      } 
+    }
+  }
+}

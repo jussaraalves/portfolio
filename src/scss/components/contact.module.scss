@@ -1,0 +1,118 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+section{
+  display: flex;
+  
+  form{
+    display: flex;
+    height: 356px;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  .infoContact{
+    max-width: 30rem; 
+    height: 45vh;
+    svg{
+      margin-top: 10px;
+      color: $pink-700;
+      font-size: 30px;
+      &:hover{
+        color: $white-100;
+      }
+    }
+  }
+
+  .gradienteText {
+    font-size: 50px;
+    font-weight: 800;
+    background: linear-gradient(to right,$pink-700, $pink-500);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-fill-color: transparent;
+    padding-bottom: 20px;
+    
+  }
+
+  input {
+    font-family: $font-main;
+    width: 524px;
+    height: 42px;
+    border: none;
+    border: 2px solid $gray-200;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 8px;
+    
+    &:focus {
+      border: 2px solid $pink-700 ;
+    }
+  }
+
+  
+
+  textarea{
+    max-width: 524px;
+    padding-left: 8px;
+    font-family: $font-main;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid $gray-200;
+    height: 140px;
+  }
+
+  .bnt{
+    background-color: $pink-700;
+    border: none;
+    color: $white-100;
+    width: 200px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 16px;
+
+    cursor: pointer;
+      &:hover{
+        color: $pink-700;
+        background-color: transparent;
+        border: 2px solid $pink-700;
+      }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .gif{
+      img{
+        display: none;
+      }
+    }
+
+    input, textarea{
+      width: 480px;
+    }
+
+    .personalInfo{
+      h1{
+        font-size: 25px; 
+      } 
+    }
+
+    .bnt{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gradienteText{
+      padding-top: 55px;
+      font-size: 25px;
+    }
+    p{
+      font-size: 16px;
+    }
+
+    input, textarea{
+      width: 350px;
+    }
+  }
+}

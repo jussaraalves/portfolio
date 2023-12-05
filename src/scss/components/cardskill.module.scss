@@ -1,0 +1,19 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.container{
+  @include flexCenter;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $white-100;
+  border: 2px solid $white-100;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+
+  &:hover{
+    border: 2px solid $pink-500;
+  }
+
+  
+}

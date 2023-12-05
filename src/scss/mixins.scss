@@ -1,0 +1,16 @@
+
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+
+
+@mixin mobileStyles {
+  @media (max-width: 768px) {
+    @include flexCenter();
+     
+  }
+}
+

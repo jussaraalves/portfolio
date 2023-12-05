@@ -1,0 +1,100 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+section {
+  @include flexCenter;
+  color: $gray-500;
+  justify-content: space-evenly;
+  height: 90vh;
+  width: 100vw;
+
+  .gradienteText {
+    font-size: 25px;
+    font-weight: 800;
+    background: linear-gradient(to right,$gray-500,$pink-700);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-fill-color: transparent;
+  }
+
+  h1{
+    font-size: 50px;
+    font-weight: 800;
+  }
+
+  span, strong{
+    color: $pink-700;
+  }
+
+  img{
+    width: 25rem;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%{
+      transform:  translateY(0px);
+    }
+    50%{
+      transform: translateY(-30px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+  p{
+    font-size: 19px;
+  }
+  
+  .introduction{
+    max-width: 25rem;
+  }
+
+  
+  .text{
+    padding: 2rem 0rem;
+  }
+
+  .btn{
+    background-color: $pink-700;
+    padding: 13px 42px;
+    border-radius: 20rem;
+    border: 2px solid $pink-700;
+    transition: ease-in-out 0.5s;
+    &:hover{
+      color: $pink-700;
+      background-color: transparent;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 70vh;
+    h1{
+      font-size: 30px; 
+    }
+
+    .gradienteText{
+      padding-top: 5rem;
+      font-size: 16px;
+    }
+
+    .btn{
+      background-color: $pink-700;
+      padding: 7px 20px;
+      border-radius: 20rem;
+      border: 2px solid $pink-700;
+      transition: ease-in-out 0.5s;
+      &:hover{
+        color: $pink-700;
+        background-color: transparent;
+      }
+    }
+    img{
+      text-align: center;
+      width: 15rem;
+    }
+  }
+  
+}

@@ -2,8 +2,7 @@
 @import '../mixins.scss';
 
 section{
-  display: flex;
-  
+  display: flex; 
   form{
     display: flex;
     height: 356px;
@@ -11,6 +10,7 @@ section{
     gap: 10px;
     
   }
+  
   .infoContact{
     max-width: 30rem; 
     height: 45vh;
@@ -25,7 +25,7 @@ section{
   }
 
   .gradienteText {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
     background: linear-gradient(to right,$pink-700, $pink-500);
     -webkit-background-clip: text;
@@ -33,6 +33,14 @@ section{
     text-fill-color: transparent;
     padding-bottom: 20px;
     
+  }
+
+  .text{
+    padding-bottom: 20px;
+  }
+
+  .gifContact{
+    width: 25rem;
   }
 
   input {
@@ -49,8 +57,6 @@ section{
       border: 2px solid $pink-700 ;
     }
   }
-
-  
 
   textarea{
     max-width: 524px;
@@ -81,10 +87,9 @@ section{
 
   @media (max-width: 768px) {
     flex-direction: column;
-    .gif{
-      img{
-        display: none;
-      }
+    .gradienteText{
+      padding-top: 50px;
+      font-size: 30px;
     }
 
     input, textarea{
@@ -107,12 +112,34 @@ section{
       padding-top: 55px;
       font-size: 25px;
     }
+
     p{
       font-size: 16px;
     }
 
     input, textarea{
       width: 350px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .gradienteText{
+      font-size: 25px;
+      padding-bottom: 0rem;
+    } 
+
+    .infoContact{
+      svg{
+        font-size: 20px;
+      }
+    }
+  
+    .gifContact{
+      width: 10rem;
+    }
+
+    form{
+      height: 270px;
     }
   }
 }

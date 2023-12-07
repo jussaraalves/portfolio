@@ -33,7 +33,10 @@ export default function Projects(){
   ];
 
   return(
-    <div className={styles.container}>
+    <div  style={{ animationDuration: '1.5s' }} className={`animate__animated animate__slideInLeft ${styles.container}`}>
+      <div>
+        <h2 className={styles.gradienteText}>&lt;Projects/&gt;</h2>
+      </div>
       <div className={styles.content}>
         {projetos.map((projeto, index) => (
           <Card key={index} {...projeto} />

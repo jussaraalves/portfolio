@@ -32,7 +32,7 @@ export default function Home(){
         <a className={styles.btn} href="/about">More About Me</a>
       </div>
       <div style={{ animationDuration: '1.5s' }} className='animate__animated animate__slideInRight'>
-        <img src={pc} alt="image of computer" />
+        <img className={styles.imageHome} src={pc} alt="image of computer" />
       </div>
     </section>
   )
